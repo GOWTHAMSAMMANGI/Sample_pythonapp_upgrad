@@ -24,26 +24,18 @@ Tasks/Activities List
 Simple Python Flask API that will return a welcome message during API call.
 Refer Dockerfile for instructions under project directory
 
-###Step 1: Wrote simple 'sample-python' application <br />
-###Step 2: Build Image >> $docker build -t gowthamsammangi/sample-python:1.0 .<br />
-###Step 3: Push Image to Repository >>  $docker push gowthamsammangi/sample-python:1.0<br />
-###Step 4: Run the docker image >> docker run -p 9000:8000 gowthamsammangi/sample-python:1.0<br />
-##CLI output:<br/>
-anithar@Anithas-MacBook-Pro sample-python % docker run -p 9000:8000 gowthamsammangi/sample-python:1.0<br />
- * Serving Flask app 'launch'<br />
- * Debug mode: on<br />
-WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.<br />
- * Running on all addresses (0.0.0.0)<br />
- * Running on http://127.0.0.1:8000<br />
- * Running on http://172.17.0.3:8000<br />
-Press CTRL+C to quit<br />
- * Restarting with stat<br />
- * Debugger is active!<br />
- * Debugger PIN: 136-583-677<br />
-###Step 5: Test application<br />
-##CLI Test result ouput below . Same URL can be validated via browser <br />
-anithar@Anithas-MacBook-Pro sample-python % curl http://127.0.0.1:9000<br />
-{"message":"Hello World Python v1"}%      <br />
+Step 1: Wrote simple 'sample-python' application 
+Step 2: Build Image >> docker build -t gowthamsammangi/sample-python:v1 .
+Step 3: Push Image to Repository >>  $docker push gowthamsammangi/sample-python:v1
+Step 4: Run the docker image >> docker run -dit --name Phythonapp -p 9000:8000 gowthamsammangi/sample-python:v1
+
+CLI output:
+ubuntu@ip-172-31-19-64:~/pp/sample-python$ docker run -dit --name Pythonapp -p 9000:8000 gowthamsammangi/sample-python:v1
+
+Step 5: Test application
+##CLI Test result ouput below . Same URL can be validated via browser
+ubuntu@ip-172-31-19-64:~/pp/sample-python$ curl http://127.0.0.1:9000
+{"message":"Welcome to my Python World v1"}  
 
    
 
